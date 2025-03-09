@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="15dp"
+    android:padding="20dp"
+    android:background="@drawable/rounded_bg"
+    android:outlineAmbientShadowColor="@color/black">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/repoIcon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/git"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/textRepoName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Google"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintTop_toBottomOf="@id/repoIcon"
+            app:layout_constraintStart_toStartOf="@id/repoIcon"
+            app:layout_constraintEnd_toEndOf="@id/repoIcon"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <View
+            android:id="@+id/repoDot"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/repository_dot"
+            app:layout_constraintEnd_toStartOf="@id/textRepoTitle"
+            app:layout_constraintTop_toTopOf="@id/repoIcon"
+            app:layout_constraintStart_toEndOf="@id/repoIcon"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/textRepoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="aarch64-rt"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/repoDot"
+            app:layout_constraintTop_toTopOf="@id/repoIcon"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/textRepoDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Startup code and exception vector for bare-metal Rust on aarch64 Cortex-A processors."
+            android:textSize="12sp"
+            android:textColor="#413B3B"
+            android:maxLines="5"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toBottomOf="@id/textRepoTitle"
+            app:layout_constraintStart_toStartOf="@id/repoDot"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/repoStars"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/star"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@id/textRepoTitle"
+            app:layout_constraintTop_toBottomOf="@id/textRepoDescription"/>
+        
+        <TextView
+            android:id="@+id/textStars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.1K"
+            android:textSize="12sp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@id/repoStars"
+            app:layout_constraintTop_toTopOf="@id/repoStars"
+            app:layout_constraintBottom_toBottomOf="@id/repoStars"/>
+
+        <ImageView
+            android:id="@+id/repoForks"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/git"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toEndOf="@id/textStars"
+            app:layout_constraintTop_toBottomOf="@id/textRepoDescription"/>
+
+        <TextView
+            android:id="@+id/textForks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="610"
+            android:textSize="12sp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@id/repoForks"
+            app:layout_constraintTop_toTopOf="@id/repoForks"
+            app:layout_constraintBottom_toBottomOf="@id/repoForks"/>
+
+        <ImageView
+            android:id="@+id/repoLanguage"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/script"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toEndOf="@id/textForks"
+            app:layout_constraintTop_toBottomOf="@id/textRepoDescription"/>
+
+        <TextView
+            android:id="@+id/textLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TypeScript"
+            android:textSize="12sp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@id/repoLanguage"
+            app:layout_constraintTop_toTopOf="@id/repoLanguage"
+            app:layout_constraintBottom_toBottomOf="@id/repoLanguage"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

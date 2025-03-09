@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="font_index_default">6</integer>
+    <integer name="font_index_small">4</integer>
+    <integer name="font_index_normal">6</integer>
+
+    <integer name="font_weight_thin">400</integer>
+    <integer name="font_weight_medium">500</integer>
+    <integer name="font_weight_bold">600</integer>
+    <integer name="font_weight_extra_bold">700</integer>
+    <integer name="font_weight_extra_extra_bold">800</integer>
+</resources>

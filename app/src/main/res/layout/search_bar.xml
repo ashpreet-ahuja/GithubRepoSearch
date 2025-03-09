@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@color/white">
+
+    <!-- Top Search Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_bg"
+        android:paddingHorizontal="8dp"
+        android:gravity="center_vertical">
+
+        <!-- Search Input Field -->
+        <EditText
+            android:id="@+id/search_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Type to Search..."
+            android:background="@null"
+            android:textSize="16sp"
+            android:paddingVertical="8dp"
+            android:paddingStart="12dp"
+            android:inputType="text"/>
+
+        <!-- Search Icon -->
+        <ImageView
+            android:id="@+id/searchIcon"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@android:drawable/ic_menu_search"
+            android:padding="4dp"
+            android:layout_marginStart="8dp"
+            app:tint="@color/black" />
+
+    </LinearLayout>
+
+    <!-- Docked Past Searches Box -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_bg"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:id="@+id/past_searches_container">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent Searches"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:paddingBottom="4dp"/>
+
+        <!-- RecyclerView for past searches -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/past_searches_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>
